@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-yybqn4e906pp4k_h97p5kk6bmk211*4=@tzz2f1%b&_oq!t0gm'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -107,14 +107,14 @@ DATABASES = {
     'default': {
         'ENGINE': 'djongo',
         'NAME': 'database',
-        # 'ENFORCE_SCHEMA': False,  # Set this to True if you want to enforce schema validation
-        # 'CLIENT': {
-        #     'host': 'mongodb+srv://rudreshtps:rudreshtps@coursedatabase.nuomdfl.mongodb.net/',
-        #     'username': 'rudreshtps',
-        #     'password': 'rudreshtps',
-        #     # 'authSource': '<auth-source>',
-        #     'authMechanism': 'SCRAM-SHA-1',
-        # }
+        'ENFORCE_SCHEMA': False,  # Set this to True if you want to enforce schema validation
+        'CLIENT': {
+            'host': 'mongodb+srv://rudreshtps:rudreshtps@coursedatabase.nuomdfl.mongodb.net/',
+            'username': 'rudreshtps',
+            'password': 'rudreshtps',
+            # 'authSource': '<auth-source>',
+            'authMechanism': 'SCRAM-SHA-1',
+        }
     }
 }
 
